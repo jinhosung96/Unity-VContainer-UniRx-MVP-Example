@@ -1,0 +1,17 @@
+using VContainer;
+using VContainer.Unity;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME# : LifetimeScope
+    {
+        #region Override Methods
+    
+        protected override void Configure(IContainerBuilder builder)
+        {
+            
+        }
+    
+        #endregion
+    }
+}

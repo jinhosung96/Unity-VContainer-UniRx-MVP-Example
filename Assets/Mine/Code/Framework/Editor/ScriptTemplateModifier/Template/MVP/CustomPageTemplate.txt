@@ -1,0 +1,34 @@
+using T_OZ.Code.Framework.Manager.UINavigator.Runtime.Page;
+using UnityEngine;
+using VContainer;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME# : Page
+    {
+        #region Inner Classes
+
+        [System.Serializable]
+        public class UIView
+        {
+            
+        }
+
+        #endregion
+
+        #region Properties
+
+        [field: SerializeField] public UIView View { get; private set; } 
+
+        #endregion
+
+        #region Override Methods
+
+        protected override void Configure(IContainerBuilder builder)
+        {
+            builder.RegisterInstance(View);
+        }
+
+        #endregion
+    }
+}

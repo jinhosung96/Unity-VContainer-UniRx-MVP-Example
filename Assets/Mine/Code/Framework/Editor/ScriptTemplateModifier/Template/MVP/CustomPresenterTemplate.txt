@@ -1,0 +1,16 @@
+using VContainer.Unity;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME# : IStartable
+    {
+        #region EntryPoint
+    
+        void IStartable.Start()
+        {
+            
+        }
+    
+        #endregion
+    }
+}

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7d21b658d393242a433250c2510b97, type: 3}
+  m_Name: UISetting
+  m_EditorClassIdentifier: 
+  <Button>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 768876ef01ca30043a665d0f8f9a5a29, type: 3}
+    defaultVolume: 0.5
+  <Buy>k__BackingField:
+    audioClip: {fileID: 8300000, guid: d419044f4528c924c8246806ad0bfb4b, type: 3}
+    defaultVolume: 0.5
+  <Clear>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 3b7cea2252b4b6b45bab4864f9faeef8, type: 3}
+    defaultVolume: 0.5
+  <Fail>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 2d77a98d162c5ab45b0b5a457ec644fe, type: 3}
+    defaultVolume: 0.5
+  <Grow>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 228a414c02aae104093ef692ae2bae7d, type: 3}
+    defaultVolume: 0.5
+  <PauseIn>k__BackingField:
+    audioClip: {fileID: 8300000, guid: d46fc59147b0a984db39e2091afb865b, type: 3}
+    defaultVolume: 0.5
+  <PauseOut>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 2fc58d986242aa845b0c76cfcba21fcc, type: 3}
+    defaultVolume: 0.5
+  <Sell>k__BackingField:
+    audioClip: {fileID: 8300000, guid: 1117d5f41aab9fd4bb7edf12579a2fa9, type: 3}
+    defaultVolume: 0.5
+  <Touch>k__BackingField:
+    audioClip: {fileID: 8300000, guid: b2339d42d71ef8646b214a6c12e95d54, type: 3}
+    defaultVolume: 0.5
+  <UpgradeOrUnlock>k__BackingField:
+    audioClip: {fileID: 8300000, guid: dc19f642807b5bc4faef18b20134d696, type: 3}
+    defaultVolume: 0.5

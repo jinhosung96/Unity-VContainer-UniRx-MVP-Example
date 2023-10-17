@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5f382b7a44c4c4fb38fa304c683a9b, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 6b65cc6246bbfcf4fa5162a5baf45f25, type: 3}
+  title: Bolt Idle Clicker JellyFarm
+  sections:
+  - heading: 방치형 클리커 게임 (Idle Clicker Game)
+    text: '캐릭터를 방치 혹은 클릭으로 재화를 최대한 많이 얻어서 목표 오브젝트를 구입하는 장르입니다.'
+    linkText: 
+    url: 	
+  - heading: 
+    text: '골드메탈 기초 강좌 VE2 진행에 필요한 에셋 팩으로 스프라이트, 애니메이션, 파티클, 사운드와 오픈폰트를 포함하고 있습니다.'
+    linkText: VE2 강좌 재생목록
+    url: https://www.youtube.com/playlist?list=PLO-mt5Iu5TeZA0y889ZMi9wJafthif03i
+  - heading: 
+    text: '골드메탈 출저만 표기하는 전제 하에 자유롭게 사용 가능합니다. (상용 가능)'
+    linkText: 골드메탈 스튜디오
+    url: https://www.goldmetal.co.kr
+  - heading: 
+    text: 'Copyright ⓒ 2021 Goldmetal'
+    linkText:
+    url:
+  loadedLayout: 1

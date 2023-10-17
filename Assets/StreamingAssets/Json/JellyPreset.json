@@ -1,0 +1,100 @@
+{
+  "presets": [
+    {
+      "id": 0,
+      "jellyPrefabPath": "Jelly 0",
+      "jellySpritePath": "Jelly 0",
+      "jellyName": "슬라임",
+      "jellyCost": 100,
+      "isUnlocked": true
+    },
+    {
+      "id": 1,
+      "jellyPrefabPath": "Jelly 1",
+      "jellySpritePath": "Jelly 1",
+      "jellyName": "젤리빈",
+      "jellyCost": 500,
+      "isUnlocked": false
+    },
+    {
+      "id": 2,
+      "jellyPrefabPath": "Jelly 2",
+      "jellySpritePath": "Jelly 2",
+      "jellyName": "포도",
+      "jellyCost": 2000,
+      "isUnlocked": false
+    },
+    {
+      "id": 3,
+      "jellyPrefabPath": "Jelly 3",
+      "jellySpritePath": "Jelly 3",
+      "jellyName": "곰돌이",
+      "jellyCost": 5000,
+      "isUnlocked": false
+    },
+    {
+      "id": 4,
+      "jellyPrefabPath": "Jelly 4",
+      "jellySpritePath": "Jelly 4",
+      "jellyName": "푸딩",
+      "jellyCost": 10000,
+      "isUnlocked": false
+    },
+    {
+      "id": 5,
+      "jellyPrefabPath": "Jelly 5",
+      "jellySpritePath": "Jelly 5",
+      "jellyName": "양갱",
+      "jellyCost": 25000,
+      "isUnlocked": false
+    },
+    {
+      "id": 6,
+      "jellyPrefabPath": "Jelly 6",
+      "jellySpritePath": "Jelly 6",
+      "jellyName": "냥발바닥",
+      "jellyCost": 50000,
+      "isUnlocked": false
+    },
+    {
+      "id": 7,
+      "jellyPrefabPath": "Jelly 7",
+      "jellySpritePath": "Jelly 7",
+      "jellyName": "꿈틀이",
+      "jellyCost": 100000,
+      "isUnlocked": false
+    },
+    {
+      "id": 8,
+      "jellyPrefabPath": "Jelly 8",
+      "jellySpritePath": "Jelly 8",
+      "jellyName": "상어",
+      "jellyCost": 150000,
+      "isUnlocked": false
+    },
+    {
+      "id": 9,
+      "jellyPrefabPath": "Jelly 9",
+      "jellySpritePath": "Jelly 9",
+      "jellyName": "초밥",
+      "jellyCost": 300000,
+      "isUnlocked": false
+    },
+    {
+      "id": 10,
+      "jellyPrefabPath": "Jelly 10",
+      "jellySpritePath": "Jelly 10",
+      "jellyName": "로얄",
+      "jellyCost": 500000,
+      "isUnlocked": false
+    },
+    {
+      "id": 11,
+      "jellyPrefabPath": "Jelly 11",
+      "jellySpritePath": "Jelly 11",
+      "jellyName": "지구",
+      "jellyCost": 1000000,
+      "isUnlocked": false
+    }
+  ]
+}

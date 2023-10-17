@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7478042719275330522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3954773596586545212}
+  - component: {fileID: 2484027060791882269}
+  m_Layer: 0
+  m_Name: AppContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3954773596586545212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478042719275330522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2484027060791882269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478042719275330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc0d91e7d8b39d429dffe8171985e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  <JellyFarmDBModel>k__BackingField:
+    path: Json
+    jsons:
+    - {fileID: 4900000, guid: 320c272b0b6029e44bd81b5ba0006d77, type: 3}
+    - {fileID: 4900000, guid: c5d27494c31c6294a946b6f7698980ae, type: 3}
+    - {fileID: 4900000, guid: c9ce0e07e4afcee49bc95961ca3896dd, type: 3}
+    - {fileID: 4900000, guid: d10d424f68b5e32468ced5f6354e68b9, type: 3}
+    - {fileID: 4900000, guid: 40ba3afc36bb9254abf3a40d5a8008a5, type: 3}
+  <UISetting>k__BackingField: {fileID: 11400000, guid: 1f76df3ad123b7447b8878857a5a8e2a, type: 2}
+  <MainSetting>k__BackingField: {fileID: 11400000, guid: feff9295307eeec43810419e48d49fa2, type: 2}
