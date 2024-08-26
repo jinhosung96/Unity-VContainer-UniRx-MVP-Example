@@ -172,31 +172,40 @@ namespace Mine.Code.Framework.Manager.UINavigator.Runtime
         /// <param name="useAnimation"> 애니메이션 사용 여부, 인스펙터 상에서 경정해주는 isUseAnimation이랑 둘 다 true일 경우에만 애니메이션을 실행한다. </param>
         internal async UniTask ShowAsync(bool useAnimation = true)
         {
+            // 해당 View가 마지막으로 활성화된 시간을 기록한다.
+            // 이는 FocusView를 찾을 때 사용된다.
             LastShowTime = Time.time;
+            
+            // 활성화된 View 목록에 해당 View를 추가한다.
             ActiveViews.Add(this);
 
+            // RectTransform 및 CanvasGroup을 초기화한다.
+            // 1프레임이 소요된다.
             var rectTransform = (RectTransform)transform;
             await InitializeRectTransformAsync(rectTransform);
             CanvasGroup.alpha = 1;
 
-            await WhenPreAppearAsync();
-            preInitializeEvent.OnNext(Unit.Default);
+            // UI View가 활성화되기 전 후에 이벤트를 발생시키며 현재 VisibleState를 갱신한다.
+            await WhenPreAppearAsync(); // 활성화 되기 전 비동기 처리
+            preInitializeEvent.OnNext(Unit.Default); // Awake 호출 전에 발생하는 이벤트
             gameObject.SetActive(true);
-            postInitializeEvent.OnNext(Unit.Default);
-
+            postInitializeEvent.OnNext(Unit.Default); // Awake 호출 후에 발생하는 이벤트
             VisibleState = VisibleState.Appearing;
-            appearEvent.OnNext(Unit.Default);
+            appearEvent.OnNext(Unit.Default); // 활성화 시작했을 때 발생하는 이벤트
 
+            // 미리 설정한 애니메이션을 실행한다.
             if (useAnimation)
             {
+                // 기본적으로 Container의 설정값을 따르나 Custom으로 설정 했을 시 View에서 따로 지정한 애니메이션을 실행한다.
                 if (animationSetting == AnimationSetting.Custom) await showAnimation.AnimateAsync(rectTransform, CanvasGroup);
                 else await UIContainer.ShowAnimation.AnimateAsync(transform, CanvasGroup);
             }
 
-            await WhenPostAppearAsync();
+            await WhenPostAppearAsync(); // 활성화 후 비동기 처리
 
+            // UI View가 활성화가 완전히 끝났을 때 이벤트를 발생시키며 현재 VisibleState를 갱신한다.
             VisibleState = VisibleState.Appeared;
-            appearedEvent.OnNext(Unit.Default);
+            appearedEvent.OnNext(Unit.Default); // 활성화 완료 후 발생하는 이벤트
         }
 
         /// <summary>

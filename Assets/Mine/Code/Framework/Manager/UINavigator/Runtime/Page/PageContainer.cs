@@ -180,14 +180,14 @@ namespace Mine.Code.Framework.Manager.UINavigator.Runtime.Page
 
         #region Private Methods
 
-        async UniTask<T> NextAsync<T>(
-            T nextPage,
-            Action<T> onPreInitialize,
-            Action<T> onPostInitialize) where T : Page
+        async UniTask<T> NextAsync<T>(T nextPage, Action<T> onPreInitialize, Action<T> onPostInitialize) where T : Page
         {
-            if (CurrentView && CurrentView.VisibleState is VisibleState.Appearing or VisibleState.Disappearing) return null;
-            if (CurrentView && CurrentView == nextPage) return null;
+            // 현재 Page가 전환 중이거나, 현재 Page와 다음 Page가 같다면 실행하지 않는다.
+            if (CurrentView && (CurrentView.VisibleState is VisibleState.Appearing or VisibleState.Disappearing || CurrentView == nextPage)) return null;
 
+            // 생성된 객체가 Awake를 호출하기 전에 사전 작업을 미리 해두기 위해 프리팹을 비활성화하고 Instantiate 한다.
+            // Awake는 비활성화 된채로 생성된 객체가 처음으로 활성화 될 때 호출된다.
+            // 또한 VContainer 라이브러리 사용 여부에 따라 생성 방식을 달리한다.
             nextPage.gameObject.SetActive(false);
             nextPage = nextPage.IsRecycle
                 ? nextPage
@@ -199,13 +199,14 @@ namespace Mine.Code.Framework.Manager.UINavigator.Runtime.Page
 #endif
             nextPage.UIContainer = this;
 
+            // Awake 호출 전후로 처리할 이벤트를 등록한다.
             nextPage.OnPreInitialize.FirstOrDefault().Subscribe(_ => onPreInitialize?.Invoke(nextPage)).AddTo(nextPage);
             nextPage.OnPostInitialize.FirstOrDefault().Subscribe(_ => onPostInitialize?.Invoke(nextPage)).AddTo(nextPage);
 
+            // 현재 Page가 있다면, 현재 Page를 비활성화하고 새로운 Page를 활성화한다.
+            // 이 때, 새롭게 활성화 되는 Page를 History에 저장한다.
             if (CurrentView) CurrentView.HideAsync().Forget();
-
             History.Push(nextPage);
-
             await CurrentView.ShowAsync();
 
             return CurrentView as T;

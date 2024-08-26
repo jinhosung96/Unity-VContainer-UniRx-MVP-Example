@@ -152,7 +152,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   <Model>k__BackingField:
-    <Id>k__BackingField: 0
+    <Id>k__BackingField: 5
 --- !u!1 &2383810649326366253
 GameObject:
   m_ObjectHideFlags: 0

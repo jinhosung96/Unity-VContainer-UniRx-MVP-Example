@@ -61,7 +61,7 @@ namespace Mine.Code.Main.UI.Main
                 soundManager.PlaySfx(uISetting.Button);
             }).AddTo(Context);
 
-            // 판매 버튼 위에 손가락을 올려진 상태인지를 체크한다.
+            // 판매 버튼 위에 손가락이 올려진 상태인지를 체크한다.
             // 젤리를 드래그한 상태로 판매 버튼 위에서 손가락을 때면 젤리를 판매한다.
             view.SellButton.OnPointerEnterAsObservable().Subscribe(_ => shopSystem.IsActiveSell = true).AddTo(Context);
             view.SellButton.OnPointerExitAsObservable().Subscribe(_ => shopSystem.IsActiveSell = false).AddTo(Context);

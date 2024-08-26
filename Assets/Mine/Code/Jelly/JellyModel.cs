@@ -47,7 +47,7 @@ namespace Mine.Code.Jelly
         public IntReactivePropertyWithRange Exp { get; } = new(0, 50);
         public int GelatinByClick => (Id + 1) * Level.Value * (upgradeModel.ClickLevel.Value + 1);
         public int GelatinByTime => (Id + 1) * Level.Value;
-        public int JellyPrice => (Id + 1) * jellyFarmDBModel.JellyPresets[Id].Value<int>("jellyCost") * Level.Value;
+        public int JellyPrice => jellyFarmDBModel.JellyPresets[Id].Value<int>("jellyCost") * Level.Value;
         public StateMachine<JellyState> AI { get; } = new();
         public SaveData Data => new() { id = Id, level = Level.Value, exp = Exp.Value };
 
