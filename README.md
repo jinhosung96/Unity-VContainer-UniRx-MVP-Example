@@ -60,7 +60,7 @@ VContainer + UniRx 기반 MVP 패턴 아키텍처 설계 방법을 공유한다.
 1. VContainer
 2. UniRx
 3. UniTask
-4. DOTween Pro
+4. DOTween
 
 ### 문서 내용
 
